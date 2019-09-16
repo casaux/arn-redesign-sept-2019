@@ -15,8 +15,14 @@
          /* page specific js */
          
          $(document).ready(function() {
-       
+       $("#navigate"). click(function(){
+				var radioValue = $("input[name='radio-ex']:checked"). val();
+				window.location.href=radioValue+".html";
+			 }); 
          });
+		  
+		  
+		  
       </script>
       <style type="text/css">
          /* page specific css */
@@ -100,7 +106,7 @@
 				
 		
 				<label class="au-control-input casa-form-radio-selection" for="keep">
-					 <input class="au-control-input__input" type="radio"  name="id" id="keep" checked value="id-passport">
+					 <input class="au-control-input__input" type="radio"  name="radio-ex" id="keep" value="declaration2">
 						<span class="au-control-input__text"> Yes, proceed with legal name from your proof of identification<br />
 													
 
@@ -109,7 +115,7 @@
 					
 					
 				<label class="au-control-input casa-form-radio-selection" for="change">
-					 <input class="au-control-input__input" type="radio"  name="id" id="change" value="change">
+					 <input class="au-control-input__input" type="radio"  name="radio-ex" id="change" value="name-change-proof">
 						<span class="au-control-input__text">No, this is not my legal name and I will provide proof of name change
 
 				</label>
@@ -120,7 +126,9 @@
 				
 				<div class="form-navigation">
 
-				<a class="au-btn" href="declaration2.html">Next</a><br />
+								<div id="navigate">
+			    <a href="#" class="au-btn au-btn--primary">Next</a>          
+            </div>
 					
 				</div>
 				
