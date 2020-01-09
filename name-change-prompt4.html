@@ -16,6 +16,24 @@
 
          $(document).ready(function() {
 
+           $('#radio-ex').change(
+          function(){
+          if ($(this).is(':checked')) {
+
+          $('#choose').css("display","none");
+
+          }
+});
+
+           $('#radio-ex1').change(
+    function(){
+        if ($(this).is(':checked')) {
+
+          $('#choose').css("display","block");
+
+        }
+    });
+
          });
       </script>
       <style type="text/css">
@@ -95,24 +113,32 @@
 
 
 				<label class="au-control-input casa-form-radio-selection" for="radio-ex">
-					 <input class="au-control-input__input" type="radio"  name="radio-ex" id="keep" checked value="id-passport">
+					 <input class="au-control-input__input" type="radio"  name="radio-ex" id="radio-ex"  value="radio-ex">
 						<span class="au-control-input__text">Continue with your full legal name from your proof of identification<br />
                     </span>
 				</label>
 
-        <p><br />Otherwise, you will need to provide <strong>proof of name change</strong>:</p>
+        <label class="au-control-input casa-form-radio-selection" for="radio-ex1">
+           <input class="au-control-input__input" type="radio"  name="radio-ex" id="radio-ex1"  value="radio-ex1">
+            <span class="au-control-input__text">Provide a proof of name change document<br />
+                    </span>
+        </label>
+
 <br />
 
+    <div id="choose" style="display:none;">
+      <p>Please select a document to prove your change of name:</p>
+      <br />
 			<label class="au-control-input">
 				  <input class="au-control-input__input" type="radio" name="radio-ex">
-				  <span class="au-control-input__text">Provide change of name certificate</span>
+				  <span class="au-control-input__text">Change of name certificate</span>
 				</label>
 
 				<br /><br />
 
 				<label class="au-control-input">
 				  <input class="au-control-input__input" type="radio" name="radio-ex">
-				  <span class="au-control-input__text">Provide marriage certificate</span>
+				  <span class="au-control-input__text">Marriage certificate</span>
 				</label>
 
 
@@ -120,7 +146,7 @@
 
 								<label class="au-control-input">
 				  <input class="au-control-input__input" type="radio" name="radio-ex">
-				  <span class="au-control-input__text">Provide divorce papers</span>
+				  <span class="au-control-input__text">Divorce papers</span>
 				</label>
 
 
@@ -130,7 +156,7 @@
 				  <input class="au-control-input__input" type="radio" name="radio-ex">
 				  <span class="au-control-input__text">I don't have any of these documents</span>
 				</label>
-
+</div>
 
 
 
